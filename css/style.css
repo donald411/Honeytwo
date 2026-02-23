@@ -1371,154 +1371,6 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 }
 
 /* ── SHOWCASE SECTION (Brand Portfolio) ──────────────────── */
-.showcase-section {
-  background: var(--color-bg);
-  padding: var(--section-pad) 0;
-}
-
-.showcase-header {
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-.showcase-header .section-title {
-  margin-bottom: 24px;
-}
-
-.filter-pills {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.pill {
-  padding: 8px 18px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-pill);
-  background: transparent;
-  color: var(--color-ink-muted);
-  font-size: .85rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all var(--transition);
-}
-
-.pill:hover {
-  border-color: var(--color-rose);
-  color: var(--color-rose);
-}
-
-.pill.active {
-  background: var(--color-rose);
-  border-color: var(--color-rose);
-  color: #fff;
-}
-
-/* Horizontal scroll track */
-.showcase-scroll-wrapper {
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 20px 0;
-  margin: 0 -24px;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
-
-.showcase-scroll-wrapper::-webkit-scrollbar {
-  height: 6px;
-}
-
-.showcase-scroll-wrapper::-webkit-scrollbar-track {
-  background: var(--color-border-light);
-}
-
-.showcase-scroll-wrapper::-webkit-scrollbar-thumb {
-  background: var(--color-rose);
-  border-radius: 3px;
-}
-
-.showcase-scroll-track {
-  display: flex;
-  gap: 20px;
-  padding: 0 24px;
-  min-width: min-content;
-}
-
-.showcase-tile {
-  flex: 0 0 calc(25% - 15px);
-  min-width: 220px;
-  background: var(--color-surface);
-  border-radius: 12px;
-  padding: 24px;
-  text-align: center;
-  transition: all var(--transition);
-}
-
-.showcase-tile:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,.1);
-  transform: translateY(-4px);
-}
-
-.showcase-tile-logo {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,0,0,.04);
-  border-radius: 8px;
-}
-
-.showcase-tile-logo img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.showcase-tile-info {
-  text-align: center;
-}
-
-.showcase-tile-cat {
-  display: inline-block;
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--color-rose);
-  margin-bottom: 6px;
-}
-
-.showcase-tile-name {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--color-ink);
-  margin-bottom: 6px;
-}
-
-.showcase-tile-desc {
-  font-size: .85rem;
-  color: var(--color-ink-muted);
-  line-height: 1.4;
-}
-
-.showcase-view-all {
-  display: block;
-  text-align: center;
-  margin-top: 32px;
-  padding: 12px 0;
-  color: var(--color-rose);
-  font-weight: 600;
-  text-decoration: none;
-  transition: opacity var(--transition);
-}
-
-.showcase-view-all:hover {
-  opacity: 0.8;
-}
-
 /* ── PROCESS STEPS SECTION ──────────────────────────────── */
 .process-section {
   background: var(--color-bg);
@@ -1824,11 +1676,6 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 
   .process-step:nth-child(3) .step-connector { display: none; }
 
-  .showcase-tile {
-    flex: 0 0 calc(33.33% - 14px);
-    min-width: 200px;
-  }
-
   .brand-card-carousel {
     flex: 0 0 240px;
     padding: 28px 22px;
@@ -1861,11 +1708,6 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 
   .process-step:nth-child(2) .step-connector { display: none; }
   .process-step:nth-child(3) .step-connector { display: block; }
-
-  .showcase-tile {
-    flex: 0 0 calc(50% - 10px);
-    min-width: 180px;
-  }
 
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);

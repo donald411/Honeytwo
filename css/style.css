@@ -2083,6 +2083,7 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
   .carousel-track {
     gap: 12px;
     padding: 0 20px;
+    animation-duration: 5.8s;
   }
 
   .brand-card-carousel {
@@ -2096,6 +2097,10 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 
   .brand-card-name {
     font-size: .9rem;
+  }
+
+  .brand-carousel {
+    padding-bottom: 16px;
   }
 
   .trust-stats {

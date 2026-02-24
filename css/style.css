@@ -1227,7 +1227,7 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 
 .hero-image {
   position: absolute;
-  right: 25%;
+  right: 5%;
   top: 0;
   width: 40%;
   height: 100%;

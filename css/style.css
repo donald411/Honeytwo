@@ -1415,6 +1415,16 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 
 .process-step {
   position: relative;
+  background: #FFFFFF;
+  border: 2px solid var(--color-rose);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  transition: all var(--transition);
+}
+
+.process-step:hover {
+  box-shadow: 0 8px 24px rgba(200, 112, 122, 0.15);
+  transform: translateY(-4px);
 }
 
 .step-num {

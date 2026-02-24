@@ -223,6 +223,12 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
   object-fit: contain;
   flex-shrink: 0;
 }
+.logo-mark-h2 {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 .logo-text span { color: var(--color-rose); }
 
 /* Primary Nav */

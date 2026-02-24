@@ -1033,9 +1033,15 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 
 /* ── FOOTER ──────────────────────────────────────────────── */
 .site-footer {
-  background: var(--color-ink);
+  background: #6B5310;
   color: rgba(255,255,255,.75);
   padding: 56px 0 28px;
+}
+.site-footer .logo-text {
+  color: #FFF;
+}
+.site-footer .logo-text span {
+  color: #FFD700;
 }
 .footer-grid {
   display: grid;

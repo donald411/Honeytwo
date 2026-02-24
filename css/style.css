@@ -489,9 +489,10 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 .about-body p + p { margin-top: 16px; }
 .about-cta { margin-top: 32px; }
 .about-image {
-  background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
+  background: linear-gradient(135deg, #6BA3D0 0%, #8DB5DC 100%);
   border-radius: var(--radius-lg);
   aspect-ratio: 4/3;
+  min-height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1167,7 +1168,7 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
   align-items: center;
   justify-content: center;
   padding-top: var(--nav-height);
-  background: linear-gradient(135deg, var(--color-ink) 0%, rgba(26, 26, 46, .95) 100%);
+  background: linear-gradient(135deg, #8B6914 0%, #A0731F 100%);
   position: relative;
   overflow: hidden;
 }
@@ -1318,9 +1319,14 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 
 .brand-card-carousel {
   flex: 0 0 182px;
+  width: 182px;
+  height: 182px;
   background: var(--bg, var(--color-surface));
-  border-radius: 16px;
-  padding: 22px 17px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   transition: all var(--transition);
   cursor: pointer;
@@ -1707,7 +1713,8 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 
   .brand-card-carousel {
     flex: 0 0 168px;
-    padding: 20px 15px;
+    width: 168px;
+    height: 168px;
   }
 
   .brand-card-logo {
@@ -1816,7 +1823,8 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 
   .brand-card-carousel {
     flex: 0 0 140px;
-    padding: 17px 14px;
+    width: 140px;
+    height: 140px;
   }
 
   .brand-card-logo {
@@ -1979,7 +1987,8 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 
   .brand-card-carousel {
     flex: 0 0 112px;
-    padding: 14px 11px;
+    width: 112px;
+    height: 112px;
   }
 
   .brand-card-logo {

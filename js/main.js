@@ -232,29 +232,43 @@
         message: fields.message.el.value.trim(),
       };
 
-      fetch('https://script.google.com/macros/s/AKfycbxCOYfadkOSdz8uvqqlRUxAyNPvZ4KvC3a82rv7su7Av1FoM4Xjwpm_ARWPBDnR9Jmw/exec', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain' },
-        body: JSON.stringify(formData),
-      })
-      .then(() => {
-        contactForm.reset();
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Inquiry';
-        if (successMsg) {
-          successMsg.classList.add('visible');
-          successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-        setTimeout(() => {
-          if (successMsg) successMsg.classList.remove('visible');
-        }, 8000);
-      })
-      .catch(() => {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Inquiry';
-        alert('Failed to send. Please try again.');
+      var iframe = document.getElementById('hidden-iframe');
+      if (!iframe) {
+        iframe = document.createElement('iframe');
+        iframe.id = 'hidden-iframe';
+        iframe.name = 'hidden-iframe';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+      }
+
+      var hiddenForm = document.createElement('form');
+      hiddenForm.method = 'POST';
+      hiddenForm.action = 'https://script.google.com/macros/s/AKfycbxCOYfadkOSdz8uvqqlRUxAyNPvZ4KvC3a82rv7su7Av1FoM4Xjwpm_ARWPBDnR9Jmw/exec';
+      hiddenForm.target = 'hidden-iframe';
+      hiddenForm.style.display = 'none';
+
+      Object.keys(formData).forEach(function(key) {
+        var input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = formData[key];
+        hiddenForm.appendChild(input);
       });
+
+      document.body.appendChild(hiddenForm);
+      hiddenForm.submit();
+      document.body.removeChild(hiddenForm);
+
+      contactForm.reset();
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Inquiry';
+      if (successMsg) {
+        successMsg.classList.add('visible');
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+      setTimeout(function() {
+        if (successMsg) successMsg.classList.remove('visible');
+      }, 8000);
     });
   }
 

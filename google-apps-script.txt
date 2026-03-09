@@ -1,0 +1,16 @@
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = e.parameter;
+  sheet.appendRow([
+    data.site,
+    new Date(),
+    data.company,
+    data.country,
+    data.name,
+    data.email,
+    data["business-type"],
+    data["brands-interest"],
+    data.message
+  ]);
+  return ContentService.createTextOutput(JSON.stringify({result: "success"})).setMimeType(ContentService.MimeType.JSON);
+}

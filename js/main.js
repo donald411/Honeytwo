@@ -222,7 +222,7 @@
       submitBtn.textContent = 'Sending…';
 
       const formData = {
-        site: 'honeytwo.co.kr',
+        site: 'H',
         company: fields.company.el.value.trim(),
         country: fields.country.el.value,
         name: fields.name.el.value.trim(),

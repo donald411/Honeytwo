@@ -243,7 +243,7 @@
 
       var hiddenForm = document.createElement('form');
       hiddenForm.method = 'POST';
-      hiddenForm.action = 'https://script.google.com/macros/s/AKfycbxCOYfadkOSdz8uvqqlRUxAyNPvZ4KvC3a82rv7su7Av1FoM4Xjwpm_ARWPBDnR9Jmw/exec';
+      hiddenForm.action = 'https://script.google.com/macros/s/AKfycbzdR5O2WpQ0VVyvqreBsuJCjqEjtoR0DacwuH2FryifvN9WGVZzvbPNFjFG71be3FuG/exec';
       hiddenForm.target = 'hidden-iframe';
       hiddenForm.style.display = 'none';
 

@@ -215,14 +215,30 @@
         return;
       }
 
-      // Success state (static site — no backend)
       const submitBtn = contactForm.querySelector('.form-submit');
       const successMsg = document.getElementById('form-success');
 
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending…';
 
-      setTimeout(() => {
+      const formData = {
+        site: 'honeytwo.co.kr',
+        company: fields.company.el.value.trim(),
+        country: fields.country.el.value,
+        name: fields.name.el.value.trim(),
+        email: fields.email.el.value.trim(),
+        'business-type': document.getElementById('business-type').value,
+        'brands-interest': document.getElementById('brands-interest').value.trim(),
+        message: fields.message.el.value.trim(),
+      };
+
+      fetch('https://script.google.com/macros/s/AKfycbxCOYfadkOSdz8uvqqlRUxAyNPvZ4KvC3a82rv7su7Av1FoM4Xjwpm_ARWPBDnR9Jmw/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      .then(() => {
         contactForm.reset();
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send Inquiry';
@@ -230,11 +246,15 @@
           successMsg.classList.add('visible');
           successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
-        // Hide success after 8 seconds
         setTimeout(() => {
           if (successMsg) successMsg.classList.remove('visible');
         }, 8000);
-      }, 800);
+      })
+      .catch(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Inquiry';
+        alert('Failed to send. Please try again.');
+      });
     });
   }
 

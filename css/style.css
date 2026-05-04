@@ -358,14 +358,6 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
   overflow: hidden;
   padding-top: var(--nav-height);
 }
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 70% 50%, rgba(200,112,122,.08) 0%, transparent 70%),
-    radial-gradient(ellipse 60% 80% at 10% 80%, rgba(184,147,90,.06) 0%, transparent 60%);
-}
 .hero-grid {
   position: absolute;
   inset: 0;
@@ -1162,26 +1154,16 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
   background: rgba(0,0,0,.04);
 }
 
-/* ── NEW HERO: Simple Background + Overlay ──────────────────── */
+/* ── NEW HERO: Solid Background ──────────────────── */
 .hero {
   min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: var(--nav-height);
-  background: linear-gradient(135deg, var(--color-ink) 0%, rgba(26, 26, 46, .95) 100%);
+  background: var(--color-ink);
   position: relative;
   overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 120% 80% at 80% 40%, rgba(200,112,122,.12) 0%, transparent 60%),
-    radial-gradient(ellipse 100% 100% at 20% 60%, rgba(184,147,90,.08) 0%, transparent 70%);
-  pointer-events: none;
 }
 
 .hero-overlay { display: none; }
@@ -1229,27 +1211,6 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
-}
-
-.hero-image {
-  position: absolute;
-  right: 5%;
-  top: 0;
-  width: 40%;
-  height: 100%;
-  z-index: 1;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-image img {
-  width: auto;
-  height: auto;
-  max-width: 80%;
-  max-height: 70%;
-  object-fit: contain;
 }
 
 /* ── BRAND CAROUSEL SECTION ──────────────────────────────── */
@@ -1832,10 +1793,6 @@ input, textarea, select { font-family: inherit; font-size: 1rem; }
 
   .hero-content {
     padding: 50px 30px;
-  }
-
-  .hero-image {
-    display: none;
   }
 
   .trust-stats {
